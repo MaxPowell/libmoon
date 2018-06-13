@@ -23,7 +23,7 @@ void dpdk_send_all_packets(uint8_t port_id, uint16_t queue_id, struct rte_mbuf**
 int config_device(uint32_t port, uint16_t rx_queues, uint16_t tx_queues, uint16_t rx_descs, uint16_t tx_descs, uint8_t drop_enable, uint8_t enable_rss, uint8_t disable_offloads, uint8_t strip_vlan, uint32_t rss_mask, uint32_t nb_mbuf, uint32_t mbuf_size);
 uint16_t rte_eth_rx_burst_export(uint8_t port_id, uint16_t queue_id, void* rx_pkts, uint16_t nb_pkts);
 uint16_t rte_eth_tx_burst_export(uint8_t port_id, uint16_t queue_id, void* tx_pkts, uint16_t nb_pkts);
-
+void rte_pktmbuf_free_export(void* m);
 
 #ifdef __cplusplus
 }
